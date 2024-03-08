@@ -4,15 +4,16 @@ import React, { useState } from 'react'
 import Header from '@/Components/Header';
 
 const page = () => {
-   const [marks, setMarks] = useState(67); 
+   
+  // sending data from page to component 
+  // to send data fromparet to child we use props 
+  const [user,setUser] = useState("userName");
+  const [Editor, setEditor] = useState("EditorName")
 
   return (
     <>
-    <h1>my marks is {marks}</h1>
-    <button onClick={()=>{
-      setMarks(78);
-    }}>click me </button>
-    <Header />
+     <h2>this is a home page </h2>
+    
     </>
   )
 }
