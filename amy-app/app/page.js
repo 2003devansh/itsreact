@@ -1,18 +1,18 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 
 const page = () => {
-  let marks = 78 ; 
-
-  const changeMarks = () => {
-    console.log(marks);
-    marks = 78 ; 
-    console.log(marks);
-  }
+  const {marks ,setMarks} = useState(80);
+  const {telly,setTelly} = useState(78);
   return (
     <>
     <h1>hi marks is {marks} </h1>
-    <button >
+    <button  onClick={()=>{
+      changeMarks();
+    }}>
       click me 
+      
     </button>
     </>
   )
